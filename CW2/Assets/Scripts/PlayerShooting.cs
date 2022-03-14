@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour
 {
 
- public Transform firePoint;     // fire point 
+    public Transform firePoint;     // fire point 
     public GameObject bulletPrefab; // bullet prefab
     public float bulletSpeed = 20;  // bullet speed
 

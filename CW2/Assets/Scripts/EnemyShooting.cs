@@ -6,10 +6,13 @@ public class EnemyShooting : MonoBehaviour
 {
     // Shooting variables 
     public Transform firePoint;     // fire point 
+    
     public GameObject bulletPrefab; // bullet prefab
+    
     public float bulletSpeed = 20;  // bullet speed
 
     public float fireRate = 0.5f;   // fire rate
+    
     float nextShotTime = 0;     // next shot time
 
     public bool toggleShoot = false;    // shooting toggle
