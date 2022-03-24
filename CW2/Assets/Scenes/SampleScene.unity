@@ -359,6 +359,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &590957675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 590957676}
+  m_Layer: 3
+  m_Name: PlayerFirePoint3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &590957676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590957675}
+  m_LocalRotation: {x: 0, y: 0, z: -0.13052624, w: 0.9914449}
+  m_LocalPosition: {x: -0.6, y: -1.1, z: -0.061727405}
+  m_LocalScale: {x: 1, y: 0.5925926, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 982718474}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15}
 --- !u!1 &718533379
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +523,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &803517112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 803517113}
+  m_Layer: 3
+  m_Name: PlayerFirePoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &803517113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803517112}
+  m_LocalRotation: {x: 0, y: 0, z: 0.13052616, w: 0.9914449}
+  m_LocalPosition: {x: 0.6, y: -1.1, z: -0.061727405}
+  m_LocalScale: {x: 1, y: 0.5925926, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 982718474}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15}
 --- !u!1 &827332295
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,8 +694,8 @@ MonoBehaviour:
   rotationSpeed: 1
   firePoint: {fileID: 255288392}
   bulletPrefab: {fileID: 2451175686770082243, guid: 6a6aed8016ff8f04698aef9b991e2331, type: 3}
-  bulletSpeed: 20
-  fireRate: 0.5
+  bulletSpeed: 10
+  fireRate: 1
   toggleShoot: 0
 --- !u!1 &982718473
 GameObject:
@@ -665,6 +727,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1533349227}
+  - {fileID: 803517113}
+  - {fileID: 590957676}
   m_Father: {fileID: 419456311}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -990,8 +1054,8 @@ MonoBehaviour:
   canSeePlayer: 0
   firePoint: {fileID: 1574676514}
   bulletPrefab: {fileID: 2451175686770082243, guid: 6a6aed8016ff8f04698aef9b991e2331, type: 3}
-  bulletSpeed: 20
-  fireRate: 0.5
+  bulletSpeed: 10
+  fireRate: 1
   rotationSpeed: 50
   toggleShoot: 0
 --- !u!1 &1342614262
@@ -1119,6 +1183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1533349227}
+  firePoint2: {fileID: 803517113}
+  firePoint3: {fileID: 590957676}
   bulletPrefab: {fileID: 2451175686770082243, guid: 6a6aed8016ff8f04698aef9b991e2331, type: 3}
   bulletSpeed: 10
   fireRate: 0.5
@@ -1200,8 +1266,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1515910646}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0, z: -0.0029296705, w: 0.9999957}
+  m_LocalPosition: {x: 0.009455517, y: -0.000027656555, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1209,7 +1275,7 @@ Transform:
   - {fileID: 1342614263}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.336}
 --- !u!114 &1515910649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1274,7 +1340,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533349226}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.114074, z: -0.061727405}
+  m_LocalPosition: {x: 0, y: -1.1, z: -0.061727405}
   m_LocalScale: {x: 1, y: 0.5925926, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
