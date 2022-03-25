@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-
+    public GameObject player;
     public Transform firePoint;     // fire point 
     public Transform firePoint2;     // fire point 
     public Transform firePoint3;     // fire point 
@@ -41,6 +41,9 @@ public class PlayerShooting : MonoBehaviour
         {
             
         }
+
+        PlayerMovement p = player.GetComponent<PlayerMovement>();
+        p.health += 10;
     }
 
     async void Update(){

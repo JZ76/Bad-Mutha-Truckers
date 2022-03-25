@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    
+    public float health = 100f;
     Vector2 movementInput;
     public float movementSpeed;
     public float rotationSpeed;
@@ -45,5 +46,12 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        if (health < 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

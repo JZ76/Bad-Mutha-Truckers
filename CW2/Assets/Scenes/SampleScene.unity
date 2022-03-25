@@ -1300,10 +1300,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d613b5d2214d248be7e9b59fb98326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1515910646}
   firePoint: {fileID: 1533349227}
   firePoint2: {fileID: 803517113}
   firePoint3: {fileID: 590957676}
-  bulletPrefab: {fileID: 2451175686770082243, guid: 6a6aed8016ff8f04698aef9b991e2331, type: 3}
+  bulletPrefab: {fileID: 2451175686770082243, guid: f2907a6228f9042bea7d651c455243da, type: 3}
   bulletSpeed: 10
   fireRate: 0.5
 --- !u!1001 &1385657290
@@ -1464,6 +1465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698da05d5ead3dc43b89007b5bdbe480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
   movementSpeed: 5
   rotationSpeed: 700
 --- !u!61 &1515910650
