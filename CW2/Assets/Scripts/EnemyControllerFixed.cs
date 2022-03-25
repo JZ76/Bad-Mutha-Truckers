@@ -6,7 +6,7 @@ public class EnemyControllerFixed : MonoBehaviour
 {
     public float health = 100f;
     
-    
+    public Transform healthBar;
     public float radius = 25f;
     
     public GameObject playerRef;
@@ -96,6 +96,7 @@ public class EnemyControllerFixed : MonoBehaviour
     {
         health -= damage;
         canSeePlayer = true;
+        healthBar.localScale = new Vector3(health/100, 1f);
         if (health <= 0)
         {
             Destroy(gameObject);

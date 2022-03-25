@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
+    public Transform healthBar;
     public float health = 100f;
     Vector2 movementInput;
     public float movementSpeed;
@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        healthBar.localScale = new Vector3(health/100, 1f);
         if (health < 0)
         {
             Destroy(gameObject);
