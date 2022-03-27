@@ -106,9 +106,11 @@ public class PlayerShooting : MonoBehaviour
             GameObject bullet3 = Instantiate(bulletPrefab, firePoint3.position, firePoint3.rotation);
             Rigidbody2D bulletRigidbody3 = bullet3.GetComponent<Rigidbody2D>();
             bulletRigidbody3.AddForce(firePoint3.up* -1.0f * bulletSpeed, ForceMode2D.Impulse);
-            count = 0;
+            count -= 3;
             HUDtext2.text = "Chickens Eaten: " + count;
-            
+            if(count>=3){
+                HUDtext2.text = "Chickens Eaten: " + count + " Burstfire Available!";
+            }
         }
     }
 }
