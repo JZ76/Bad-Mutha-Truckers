@@ -20,9 +20,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         move();
-        
     }
 
     void move()
@@ -50,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
     {
         health -= damage;
         healthBar.localScale = new Vector3(health/100, 1f);
-        if (health < 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
         }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,14 +37,12 @@ public class PlayerShooting : MonoBehaviour
         {
             count++;
         }
-
+        PlayerMovement p = player.GetComponent<PlayerMovement>();
+        p.health = Math.Min(p.health + 10, 100);
         if (collision.gameObject.name == "Bullet(Clone)" && fireMode3)
         {
-            
+            p.health += 10;
         }
-
-        PlayerMovement p = player.GetComponent<PlayerMovement>();
-        p.health += 10;
     }
 
     void Update(){

@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
 {
     public float health = 100f;
     
+    public Transform healthBar;
     
     public float radius = 25f;
     
@@ -130,7 +131,7 @@ public class EnemyController : MonoBehaviour
             }
             else
             {
-                if (health < 100f)
+                if (health < 30f)
                 {
                     PathManager.RequestPath(new Vector2(transform.position.x, transform.position.y),
                         new Vector2(playerRef.transform.position.x, playerRef.transform.position.y), this, OnPathFound);
@@ -179,6 +180,7 @@ public class EnemyController : MonoBehaviour
     {
         health -= damage;
         canSeePlayer = true;
+        healthBar.localScale = new Vector3(health/30, 1f);
         if (health <= 0)
         {
             Destroy(gameObject);
