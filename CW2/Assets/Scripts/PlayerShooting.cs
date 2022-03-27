@@ -46,7 +46,7 @@ public class PlayerShooting : MonoBehaviour
         p.health += 10;
     }
 
-    async void Update(){
+    void Update(){
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             fireMode1 = true;
